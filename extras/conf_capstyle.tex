@@ -1,0 +1,75 @@
+% --------------------------------
+% Estilo dos títulos do CAPÍTULOS
+% --------------------------------
+\makechapterstyle{mymadsen}{%
+  
+  \chapterstyle{default}
+  
+  \renewcommand*{\chapnamefont}
+  {%
+    \normalfont\large\scshape\hspace{12cm}
+    }
+  
+  \renewcommand*{\chaptitlefont}
+  {%
+    \normalfont\Huge\bfseries%\sffamily
+    \raggedleft
+    }
+  
+  \renewcommand*{\chapternamenum}{}
+  
+  \setlength{\chapindent}{0.08 in} %antes era {0.75 in}
+  
+  \setlength\beforechapskip{0.01 in}
+  
+  \renewcommand*{\printchapternum}
+  {%
+    \makebox[0pt][l]{\hspace{0.5cm}%
+      \resizebox{!}{1cm}{%
+        \bfseries%\sffamily
+        \thechapter}%
+    }%
+  }%
+  
+  \renewcommand*{\printchapternonum}{%
+    \chapnamefont \phantom{\printchaptername \chapternamenum%
+      \makebox[0pt][l]{\hspace{0.4em}%
+        \resizebox{!}{4ex}{%
+          \chapnamefont\bfseries%\sffamily 
+          10}%
+      }%
+    }%
+  }%
+  
+  \setlength{\beforechapskip}{-1.5cm}
+  
+  \setlength\midchapskip{0cm}
+  
+  \renewcommand*{\printchaptertitle}[1]{%
+    \begin{adjustwidth}{-\chapindent}{}
+      \par\hrulefill\vskip\midchapskip
+      \raggedleft \chaptitlefont ##1\par\nobreak
+    \end{adjustwidth}}
+}
+
+
+
+
+% --------------------------------------
+%   Estabelecendo o estilo do capítulo
+% --------------------------------------
+    \chapterstyle{mymadsen}
+% --------------------------------------
+
+
+
+
+%---------------------------------
+%	Identação de Parágrafos
+%---------------------------------
+
+% O tamanho da identação do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
